@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="calculator.css" />
+    <!-- Add Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    />
+    <title>Calculator</title>
+  </head>
+  <body class="bg-gradient">
+    <h1
+      class="fw-bold text-white"
+      style="text-align: center; font-family: 'Times New Roman', Times, serif"
+    >
+      Calculator
+    </h1>
+
+    <div
+      class="calculator justify-content-center border border-dark rounded p-4"
+      style="background-color: black"
+    >
+      <input type="text" id="display" class="form-control" disabled />
+      <div class="button-container">
+        <button
+          class="button btn btn-danger text-white rounded-circle"
+          onclick="playSound(); clearDisplay();"
+        >
+          C
+        </button>
+        <button
+          class="button btn btn-secondary rounded-circle"
+          onclick="playSound(); addToDisplay('1');"
+        >
+          1
+        </button>
+        <button
+          class="button btn btn-secondary rounded-circle"
+          onclick="playSound(); addToDisplay('2');"
+        >
+          2
+        </button>
+        <button
+          class="button btn btn-secondary text-white rounded-circle"
+          onclick="playSound(); addToDisplay('+');"
+        >
+          +
+        </button>
+        <button
+          class="button btn btn-secondary rounded-circle"
+          onclick="playSound(); addToDisplay('3');"
+        >
+          3
+        </button>
+        <button
+          class="button btn btn-secondary rounded-circle"
+          onclick="playSound(); addToDisplay('4');"
+        >
+          4
+        </button>
+        <button
+          class="button btn btn-secondary text-white rounded-circle"
+          onclick="playSound(); addToDisplay('-');"
+        >
+          -
+        </button>
+        <button
+          class="button btn btn-secondary rounded-circle"
+          onclick="playSound(); addToDisplay('5');"
+        >
+          5
+        </button>
+        <button
+          class="button btn btn-secondary rounded-circle"
+          onclick="playSound(); addToDisplay('6');"
+        >
+          6
+        </button>
+        <button
+          class="button btn btn-secondary text-white rounded-circle"
+          onclick="playSound(); addToDisplay('*');"
+        >
+          *
+        </button>
+        <button
+          class="button btn btn-secondary rounded-circle"
+          onclick="playSound(); addToDisplay('7');"
+        >
+          7
+        </button>
+        <button
+          class="button btn btn-secondary rounded-circle"
+          onclick="playSound(); addToDisplay('8');"
+        >
+          8
+        </button>
+        <button
+          class="button btn btn-secondary text-white rounded-circle"
+          onclick="playSound(); addToDisplay('/');"
+        >
+          /
+        </button>
+        <button
+          class="button btn btn-secondary rounded-circle"
+          onclick="playSound(); calculate();"
+        >
+          =
+        </button>
+        <button
+          class="button btn btn-secondary rounded-circle"
+          onclick="playSound(); addToDisplay('9');"
+        >
+          9
+        </button>
+        <button
+          class="button btn btn-secondary rounded-circle"
+          onclick="playSound(); addToDisplay('0');"
+        >
+          0
+        </button>
+        <button
+          class="button btn btn-secondary rounded-circle"
+          onclick="playSound(); addToDisplay('.');"
+        >
+          .
+        </button>
+      </div>
+    </div>
+
+    <!-- Add Bootstrap JS and Popper.js -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+    <!-- Include sound.js for sound effect -->
+    <script src="sound.js"></script>
+    <script>
+      let currentDisplay = "";
+      // Initialize display value
+      document.querySelector("#display").value = currentDisplay;
+    </script>
+  </body>
+</html>

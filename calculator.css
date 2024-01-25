@@ -1,0 +1,38 @@
+body {
+  background: linear-gradient(to bottom, #000000, #696767); /* Black gradient effect */
+  margin: 0; /* Remove default body margin */
+  height: 100vh; /* Set body height to 100% of the viewport height */
+}
+
+.calculator {
+  width: 200px; /* Reduced width */
+  margin: auto;
+  margin-top: 50px;
+}
+
+#display {
+  margin-bottom: 10px; /* Margin for the input */
+}
+
+.button-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 5px;
+  margin-top: 10px; /* Margin for the first row of buttons */
+}
+
+.button {
+  width: 40px; /* Reduced button size */
+  height: 40px; /* Reduced button size */
+  font-size: 25px; /* Adjusted font size */
+  cursor: pointer;
+  /*background: linear-gradient(to bottom, black, #333, white); /* Gradient effect */  
+  border: 1px solid ; /* Add a transparent border for better rounding */
+  color: white;
+  margin-top: 2px;
+}
+
+.button:hover {
+  transform: scale(1.2);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
